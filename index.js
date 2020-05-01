@@ -90,11 +90,17 @@ async function listFiles(auth) {
 }
 
 
+/**
+ * Cria Pastas
+// @param {google.auth.OAuth2} auth 
+// 
+//  */
 
-async function dirCreate(auth, name) {
+async function dirCreate(auth) {
+  console.log("aaa")
   const drive = google.drive({version: 'v3', auth});
   var fileMetadata = {
-    'name': name,
+    'name': 'nome da pasta',
     'mimeType': 'application/vnd.google-apps.folder'
   };
   drive.files.create({
